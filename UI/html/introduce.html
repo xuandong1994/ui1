@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .header__navbar-logo--one {
+    width: 100px;
+    height: 100px;
+
+
+  }
+
+  .header__navbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    height: 80px;
+
+  }
+
+  .header__navbar-list-item {
+    list-style: none;
+  }
+
+  .header__navbar-list-item-tow {
+    display: flex;
+  }
+
+  .header__navbar-list-link {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff
+  }
+
+  .header__ul-list {
+
+    display: none;
+  }
+
+  .header__ul-item {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    list-style: none;
+    top: 62px;
+    height: 300px;
+    width: 220px;
+    font-size: 30px;
+    left: 500px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+
+  .header__navbar-list-item:hover .header__ul-list {
+    display: block;
+  }
+
+  .header__ul-list::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 50px;
+    left: 500px;
+    border-radius: 5px;
+
+
+  }
+
+  .header__navbar-login {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    font-size: 20px;
+  }
+
+  .header__navbar-list {
+    display: flex;
+
+  }
+
+  .header__navbar-list-item {
+    margin: 20px;
+  }
+
+  .header__navbar-ionform {
+    display: flex;
+  }
+
+  .header__search-ipt {
+    width: 200px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 0 30px 0 10px;
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    border-radius: initial;
+  }
+
+  .icon {
+    position: relative;
+    right: 50px;
+    padding: 20px;
+  }
+
+  .icon1 {
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .header__cart-cire {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    right: 25px;
+    top: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+    font-size: 14px;
+    line-height: 20px;
+
+  }
+
+  .link {
+    text-decoration: none;
+    color: #fff;
+  }
+
+
+  .header__navbar-login--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: #fff;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__navbar-list-item,
+  .header__navbar-list-link:hover {
+    color: grey;
+  }
+
+  ::placeholder {
+    font-size: 15px;
+  }
+
+  .img__container {
+    width: 100%;
+    background-size: cover;
+    height: 700px;
+  }
+
+  .infor__list {
+    background-color: black;
+    border: 1px solid #dbdbdb;
+    width: 80px;
+    position: relative;
+    cursor: pointer;
+    top: 30px;
+
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+
+  }
+
+  .header__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 50px;
+  }
+
+  .p {
+    width: 500px;
+    background-color: #b6b6b6;
+    font-size: 20px;
+    position: absolute;
+    left: 150px;
+    box-shadow: 0 4px 4px 4px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    bottom: 200px;
+    height: 240px;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .header__container2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .p2 {
+    width: 500px;
+    background-color: #b6b6b6;
+    font-size: 20px;
+    text-align: center;
+    bottom: 200px;
+    position: absolute;
+    left: 900px;
+    box-shadow: 0 4px 4px 4px rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+
+  .header__container3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 50px;
+  }
+
+  .p3 {
+    width: 600px;
+    background-color: #b6b6b6;
+    font-size: 20px;
+    position: absolute;
+    left: 100px;
+    box-shadow: 0 4px 4px 4px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    bottom: 150px;
+    height: 270px;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+  }
+
+  img {
+    width: 900px;
+    filter: brightness(90%);
+    z-index: 1;
+    height: 400px;
+  }
+
+  .footer {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .footer__row {
+    display: grid;
+    column-gap: 78px;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    padding: 80px;
+  }
+
+  .footer__desc {
+    margin-top: 22px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #a9b3bb;
+  }
+
+  .footer__heading {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #ffffff;
+  }
+
+  .footer__list {
+    margin-bottom: 28px;
+  }
+
+  .footer__link {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #a9b3bb;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .footer__link:hover {
+    text-decoration: underline;
+  }
+
+  .footer__item {
+    margin-bottom: 10px;
+    list-style: none;
+
+  }
+
+  .footer__social {
+    display: flex;
+    margin-bottom: 28px;
+    column-gap: 10px;
+  }
+
+  .footer__social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+    background: #fff;
+    transition: 0.25s;
+  }
+
+  .footer__social-btn:hover {
+    color: #fff;
+    background: #fff;
+  }
+
+  .footer-form {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 10px;
+  }
+
+  .footer-form__input {
+    width: 212px;
+    height: 46px;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    background: transparent;
+  }
+
+  .footer-form__input::placeholder {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #9ca8b1;
+  }
+
+  .footer-form__submit {
+    min-width: 108px;
+    --height: 46px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+  }
+
+  .footer__copyright {
+    border-top: 1px solid #fff;
+  }
+
+  .footer__copyright-text {
+    padding: 28px 0 42px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    text-align: center;
+    color: #aab3ba;
+  }
+</style>
+
+<body>
+  <div style="position: relative;z-index: 3;" class="container">
+    <header class="header">
+      <div>
+        <div class="header__container-img">
+          <img class="img__container" src="../asset/image/phonhgkhach.jpg" alt="">
+
+        </div>
+        <!-- navbar -->
+        <nav style="position: fixed;top: 0px;" class="header__navbar">
+          <!-- layout logo -->
+          <div class="header__navbar-logo">
+            <img class="header__navbar-logo--one logo" src="../asset/image/logo11.png" alt="logo">
+          </div>
+          <!-- layout list -->
+          <div class="header__navbar-listall">
+            <ul class="header__navbar-list">
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-list-link" href="../index.html"> Trang Chủ </a>
+
+              </li>
+              <li class="header__navbar-list-item header__navbar-list-item-tow">
+                <a class="header__navbar-list-link" href="../html/livingroom.html"> Sản Phẩm </a>
+                <span class="material-symbols-outlined">
+                  expand_more
+                </span>
+              </li>
+              <li class="header__navbar-list-item header__navbar-list-item--has-qr header__navbar-list-item-tow">
+                <a class="header__navbar-list-link" href=""> Phòng
+                  <div class="header__ul-list">
+                    <ul class="header__ul-item">
+                      <li><a class="link" href="./livingroom.html">Phòng Khách</a></li>
+                      <li><a class="link" href="./diningroom.html">Phòng Ăn</a></li>
+                      <li><a class="link" href="./bedroom.html">Phòng Ngủ</a></li>
+                      <li><a class="link" href="./workroom.html">Phòng Làm Việc</a></li>
+                      <li>Tủ Bếp</li>
+                      <li>Ngoại Thất</li>
+                    </ul>
+                  </div>
+                </a>
+                <span class="material-symbols-outlined">
+                  expand_more
+                </span>
+
+              </li>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-list-link" href=""> Giới Thiệu </a>
+              </li>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-list-link" href=""> Liên Hệ </a>
+              </li>
+            </ul>
+          </div>
+          <!-- layout search -->
+          <div class="header__navbar--search">
+            <input oninput="searchProducts()" class="header__search-ipt" type="text" placeholder="Tìm kiếm...">
+
+            <span onclick="sortByName()" class="material-symbols-outlined icon">
+              search
+            </span>
+            <div id="search">
+              <!-- <ul>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+
+                                </ul> -->
+            </div>
+          </div>
+
+          <!-- lay out login,register -->
+          <div class="header__navbar-login-register">
+
+            <ul class="header__navbar-ionform">
+              <a style="color: #fff;" href="./cart.html">
+                <span class="material-symbols-outlined icon1 ">
+                  shopping_cart
+                </span>
+              </a>
+              <span class="header__cart-cire">0</span>
+              <span onclick="clickUser()" style="display: none;" class="material-symbols-outlined person">
+                person
+              </span>
+              <div class="infor__list" style="display: none;">
+                <div class="infor__logout " onclick="logOut()">
+                  <span class="material-symbols-outlined">
+                    logout
+                  </span>
+                </div>
+                <div class="infor__cart">
+                  <a href="./html/cart.html"><span style="color: #fff;" class="material-symbols-outlined">
+                      shopping_cart
+                    </span></a>
+                </div>
+                <span class="material-symbols-outlined close">
+                  cancel
+                </span>
+              </div>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-login header__navbar-login--separate login " href="./register.html">Đăng Ký</a>
+              </li>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-login register " href="./login.html">Đăng Nhập</a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+      <div id="snackbar"></div>
+      <!-- header end -->
+    </header>
+  </div>
+  <div style="text-align: center; background-color: #b6b6b6;height: 80px;line-height: 80px;">
+    <h1>Giới thiệu</h1>
+  </div>
+  <h1 style="text-align: center; line-height: 80px;">PHÒNG KHÁCH COASTAL - CẢM HỨNG MIỀN DUYÊN HẢI</h1>
+  <div class="c">
+    <div class="1">
+      <div class="header__container">
+        <div>
+          <p class="p">Coastal - miền duyên hải, hứa hẹn sẽ mang đến cảm giác mát lành của biển xanh, cát vàng và gió
+            biển tươi mới cho không gian của bạn. Ngôn ngữ thiết kế của Coastal kết hợp đường nét mềm mại và tự nhiên,
+            chất vải xanh tươi mát mang màu sắc của biển cùng nét vững chãi, tông gỗ ấm áp tạo nên sự tương phản hài hòa
+            tựa như biển rộng bí ẩn và đất liền thân thuộc. Những đường nét tinh khôi ấy tạo nên một tổng thể phòng
+            khách hài hòa, ấm cúng.</p>
+        </div>
+        <div>
+          <img src="../asset/image/phongkhach1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="2">
+      <div class="header__container2">
+        <div>
+          <img src="../asset/image/phongkhach1.jpg" alt="">
+        </div>
+
+        <div>
+
+          <p class="p2">Sofa Coastal với hình khối lạ mắt, gồm những đường cong bồng bềnh, theo xu hướng Modern Organic,
+            mang lại cảm giác êm ái, thư giãn. Bàn nước Coastal với 2 bề mặt trên và dưới mang hai tông màu gỗ khác
+            nhau, tạo hiệu ứng thị giác tăng chiều sâu.
+
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="3">
+      <div class="header__container3">
+        <div>
+
+          <p class="p3">Bên cạnh sofa, bạn có thể đặt thêm chiếc bàn bên với kiểu dáng tối giản để bài trí các vật trang
+            trí như bình hoa, tượng, khung hình, đèn trang trí,… Bàn bên Coastal mang đường nét thanh lịch cùng màu sắc
+            nhã nhặn sẽ làm nổi bật vẻ đẹp của sofa và giúp cho các sản phẩm trong không gian phòng khách được kết nối
+            hài hòa với nhau.
+
+            Để tăng thêm cảm giác mát lành của biển cả, ngoài việc bài trí thêm các chậu cây xanh ở góc phòng, bạn nên
+            treo thêm một bức tranh cùng tông màu với sofa. Bên cạnh đó, những chiếc thảm trang trí với tông màu của cát
+            vàng sẽ giúp cho phòng khách của bạn tựa như một bãi biển thu nhỏ, mang đến cảm giác tươi mới và tinh khiết.
+          </p>
+        </div>
+        <div>
+          <img src="../asset/image/phongkhach1.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__column">
+          <!-- logo -->
+          <a href="/">
+            <div class="logo">
+              <span class="logo__circle"></span>
+              <span class="logo__text">
+                <span style="font-size: 25px; color: #fff;" class="logo__brand">Kết Nối với Home</span>
+
+              </span>
+            </div>
+          </a>
+          <!-- desc -->
+          <p class="footer__desc">
+            Một không gian sống đẹp là sự kết hợp hoàn hảo giữa nội thất và kiến trúc.
+          </p>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Giới thiệu</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Chuyện nhà Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Tổng công ty</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Tuyển dụng</a>
+            </li>
+          </ul>
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Hỗ trợ</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Đổi trả</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Sản Phẩm </a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Ý tưởng</a>
+            </li>
+          </ul>
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Thiết kế</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__heading">Bản tin</h3>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dvi" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+          </div>
+
+          <h3 class="footer__heading">Đăng ký</h3>
+
+          <p class="footer__desc">
+            Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Home
+          </p>
+
+          <form class="footer-form" action="">
+            <input class="footer-form__input" type="email" name="email" id="email" placeholder="Enter your email..." />
+            <button class="btn footer-form__submit" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          © 2023 - Bản quyền của Home - thương hiệu thuộc AKA Furniture.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/introduce.js"></script>
+</body>
+
+</html>

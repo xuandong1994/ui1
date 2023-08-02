@@ -1,0 +1,378 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+}
+tr,td{
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+   
+}
+.action-quantity {
+    display: inline-flex;
+  line-height: 200px;
+  
+}
+.material-symbols-outlined{
+    cursor: pointer;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+table{
+    width: 1300px;
+    margin-left: 112px ;
+}
+
+
+
+body {
+    width: 100%;
+}
+.header__navbar-logo--one {
+    width: 100px;
+    height: 100px;
+   
+
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    height: 80px;
+    
+}
+
+.header__navbar-list-item {
+    list-style: none;
+}
+.header__navbar-list-item-tow{
+    display: flex;
+}
+.header__navbar-list-link {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff
+}
+.header__ul-list{
+   
+    display: none;
+}
+
+.header__ul-item{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  list-style: none;
+  top: 45px;
+  height: 279px;
+  width: 220px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #fff;
+  left: 500px;
+  }
+  .header__ul-item li{
+    padding: 12px;
+    transition: all 0.25s ease-in;
+    
+  }
+  .header__ul-item li:hover{
+    background-color: #9ca8b1;
+    
+  }
+  .header__ul-item li:not(:last-child){
+    border-bottom: 1px solid rgb(246, 247, 248);
+  }
+.header__navbar-list-item:hover .header__ul-list {
+display: block;
+}
+/* .header__ul-list::before{
+content: "";
+position: absolute;
+width: 220px;
+background-color: rgba(0, 0, 0, 0.5);
+height: 50px;
+left: 500px;
+border-radius: 5px;
+
+
+} */
+.header__navbar-login {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    font-size: 20px;
+}
+
+.header__navbar-list {
+    display: flex;
+
+}
+
+.header__navbar-list-item {
+    margin: 20px;
+}
+
+.header__navbar-ionform {
+    display: flex;
+}
+
+.header__search-ipt {
+    width: 200px;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 0 30px 0 10px;
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    border-radius: initial;
+}
+.imga{
+  width: 100px;
+  height: 100px;
+}
+.product__item2{
+  display: flex;
+  width: 300px;
+  background-color:#9ca8b1;
+}
+#search{
+  max-height: 500px;
+  overflow-y: auto;
+  width: 300px;
+  
+}
+.rendername{
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+.icon {
+    position: relative;
+    right: 50px;
+    padding: 20px;
+}
+.icon1 {
+    padding: 20px;
+    cursor: pointer;
+}
+.header__cart-cire {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  right: 25px;
+  top: 10px;
+  text-align: center;
+  border: 1px solid #fff;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+
+.header__navbar-login--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: #fff;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-list-item,
+.header__navbar-list-link:hover {
+    color: grey;
+}
+
+::placeholder {
+    font-size: 15px;
+}
+.img__container{
+    width: 100%;
+   background-size: cover;
+   height: 700px;
+}
+.person {
+    margin-top: 20px;
+}
+.infor__list{
+    background-color: black;
+   border: 1px solid #dbdbdb;
+    width: 80px;
+    position: relative;
+    cursor: pointer;
+    top: 30px;
+    
+  }
+  .close{
+   position: absolute;
+   right: 0;
+   top: 0;
+   color: red;
+  
+  }
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+   
+    
+ }
+
+
+  .footer__row {
+    display: grid;
+    column-gap: 78px;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    padding: 80px;
+  }
+  
+  .footer__desc {
+    margin-top: 22px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #a9b3bb;
+  }
+  
+  .footer__heading {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #ffffff;
+  }
+  
+  .footer__list {
+    margin-bottom: 28px;
+  }
+  
+  .footer__link {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #a9b3bb;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  
+  .footer__link:hover {
+    text-decoration: underline;
+  }
+  
+  .footer__item {
+    margin-bottom: 10px;
+    list-style: none;
+    
+  }
+  
+  .footer__social {
+    display: flex;
+    margin-bottom: 28px;
+    column-gap: 10px;
+  }
+  
+  .footer__social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+    background: #fff;
+    transition: 0.25s;
+  }
+  
+  .footer__social-btn:hover {
+    color: #fff;
+    background: #fff;
+  }
+  
+  .footer-form {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .footer-form__input {
+    width: 212px;
+    height: 46px;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    background: transparent;
+  }
+  
+  .footer-form__input::placeholder {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #9ca8b1;
+  }
+  
+  .footer-form__submit {
+    min-width: 108px;
+    --height: 46px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+  }
+  
+  .footer__copyright {
+    border-top: 1px solid #fff;
+  }
+  
+  .footer__copyright-text {
+    padding: 28px 0 42px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    text-align: center;
+    color: #aab3ba;
+  }
+  .fa-facebook,.fa-instagram,.fa-google,.fa-github,.fa-twitter{
+    text-decoration: none;
+     color: #f2f2f2; 
+    margin-right: 15px;
+    font-size: 30px;
+  
+  }
+  .link{
+    text-decoration: none;
+    color: #fff;
+  }
+  .intomoney{
+    width: 75%;
+    height: 50px;
+    font-size: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  .btnntb{
+    width: 150px;
+    height: 50px;
+    background-color: #9ca8b1;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+   
+
+  }
+  
+ 
+  

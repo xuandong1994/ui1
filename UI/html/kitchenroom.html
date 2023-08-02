@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tủ bếp</title>
+    <link rel="stylesheet" href="../css/kitchenroom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+     <!-- header area -->
+     <div style="position: relative;" class="container">
+        <header class="header">
+            <div>
+                 <div class="header__container-img">
+                      <img class="img__container" src="../asset/image/tubepbaner.jpg" alt="" > 
+                     
+                  </div>
+                <!-- navbar -->
+                <nav style="position: fixed;top: 0px;" class="header__navbar">
+                    <!-- layout logo -->
+                    <div class="header__navbar-logo">
+                        <img class="header__navbar-logo--one logo" src="../asset/image/logo11.png" alt="logo">
+                    </div>
+                    <!-- layout list -->
+                    <div class="header__navbar-listall">
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-list-item">
+                                <a class="header__navbar-list-link" href="../index.html"> Trang Chủ </a>
+
+                            </li>
+                            <li class="header__navbar-list-item header__navbar-list-item-tow">
+                                <a class="header__navbar-list-link" href=""> Sản Phẩm </a>
+                                <span class="material-symbols-outlined">
+                                    expand_more
+                                </span>
+                            </li>
+                            <li class="header__navbar-list-item header__navbar-list-item--has-qr header__navbar-list-item-tow">
+                                <a class="header__navbar-list-link" href=""> Phòng 
+                                    <div   class="header__ul-list">
+                                        <ul class="header__ul-item">
+                                        <li><a class="link" href="./livingroom.html">Phòng Khách</a></li> 
+                                        <li><a class="link" href="./diningroom.html">Phòng Ăn</a></li> 
+                                        <li><a class="link" href="./bedroom.html">Phòng Ngủ</a></li> 
+                                        <li><a class="link" href="./workroom.html">Phòng Làm Việc</a></li> 
+                                        <li><a class="link"href="./kitchenroom.html">Tủ Bếp</a></li>
+                                        <li>Ngoại Thất</li> 
+                                     </ul>
+                                    </div>
+                                </a>
+                                <span class="material-symbols-outlined">
+                                    expand_more
+                                </span>
+                              
+                            </li>
+                            <li class="header__navbar-list-item">
+                                <a class="header__navbar-list-link" href=""> Giới Thiệu </a>
+                            </li>
+                            <li class="header__navbar-list-item">
+                                <a class="header__navbar-list-link" href=""> Liên Hệ </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- layout search -->
+                    <div class="header__navbar--search">
+                        <input oninput="searchProducts()" class="header__search-ipt" type="text" placeholder="Tìm kiếm...">
+
+                        <span class="material-symbols-outlined icon">
+                            search
+                        </span>
+                    </div>
+
+                    <!-- lay out login,register -->
+                    <div class="header__navbar-login-register">
+
+                        <ul class="header__navbar-ionform">
+                            <span class="material-symbols-outlined icon1">
+                                shopping_cart
+                            </span>
+                            <span class="header__cart-cire" >1</span>
+                            <span onclick="clickUser()"  class="material-symbols-outlined person">
+                                person
+                                <div class="infor__list" style="display: none;">
+                                    <div onclick="logOut()" class="infor__logout logout">
+                                        logout
+                                    </div>
+                                    <div class="infor__cart">
+                                      <a style="color: #dbdbdb;" href="">
+                                        <span class="material-symbols-outlined">
+                                        shopping_cart
+                                        </span>
+                                    </a>
+                                    </div>
+                                    <span class="material-symbols-outlined close">
+                                        cancel
+                                    </span>
+                                </div>
+                                </span>
+                                <li class="header__navbar-list-item">
+                                    <a  class="header__navbar-login header__navbar-login--separate login " href="./register.html">Đăng Ký</a>
+                                </li>
+                                <li class="header__navbar-list-item">
+                                    <a class="header__navbar-login register " href="./login.html">Đăng Nhập</a>
+                                </li>
+                        </ul>
+                    </div>
+                   
+                </nav>
+            </div>
+            <div id="snackbar"></div>
+            <div style="background-color: rgba(0, 0, 0, 0.5); color: #dbdbdb;
+        text-align: center; height: 50px"><h1>Tủ bếp</h1></div>
+            <!-- header end -->
+        </header>
+    </div>
+    <main class="main__container">
+     <div class="product-row">
+          
+        <div class="productsLiving">
+        </div>
+     </div>
+     <!-- main area  -->
+     </main>
+     <div class="pagination">
+        <span onclick="decreasePage()" class="material-symbols-outlined">
+            arrow_back_ios
+            </span>
+        <ul id="pages">
+            <!-- <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li> -->
+        </ul>
+        <span onclick="increasepage ()" class="material-symbols-outlined">
+            arrow_forward_ios
+            </span>
+    </div>
+     <script src="../js/livingroom.js"> </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <form action="/action_page.php" class="form">
+        <div class="container">
+            <h1>Đăng Ký</h1>
+            <p>Vui lòng điền vào mẫu này để tạo một tài khoản.</p>
+            <hr>
+    
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Mời Nhập Email" name="email" id="email" required>
+    
+            <label for="psw"><b>Mật Khẩu</b></label>
+            <input type="text" placeholder="Mời Nhập Password" name="psw" id="password" required>
+            <label for=""><b>Nhập Lại Mật Khẩu</b></label>
+            <input type="text" placeholder="Mời Nhập Lại Password" name="" id="confirmPassword" required>
+            <button type="submit" class="registerbtn" onclick="register(event)">Đăng Ký</button>
+        </div>
+   
+        <div class="container signin">
+            <p>Bạn Có Sẵn Sàng Tạo Tài Khoản <a href="./login.html">Sign in</a>.</p>
+        </div>
+        <div id="registersnackbar"></div>
+    </form>
+   <script src="../js/register.js"></script>
+</body>
+</html>

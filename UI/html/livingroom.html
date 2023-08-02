@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phòng Khách</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/livingroom.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <!-- header area -->
+  <div style="position: relative;" class="container">
+    <header class="header">
+      <div>
+        <div class="header__container-img">
+          <img class="img__container" src="../asset/image/phonhgkhach.jpg" alt="">
+
+        </div>
+        <!-- navbar -->
+        <nav style="position: fixed;top: 0px;" class="header__navbar">
+          <!-- layout logo -->
+          <div class="header__navbar-logo">
+            <img class="header__navbar-logo--one logo" src="../asset/image/logo11.png" alt="logo">
+          </div>
+          <!-- layout list -->
+          <div class="header__navbar-listall">
+            <ul class="header__navbar-list">
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-list-link" href="../index.html"> Trang Chủ </a>
+
+              </li>
+              <li class="header__navbar-list-item header__navbar-list-item-tow">
+                <a class="header__navbar-list-link" href="../html/livingroom.html"> Sản Phẩm </a>
+                <span class="material-symbols-outlined">
+                  expand_more
+                </span>
+              </li>
+              <li class="header__navbar-list-item header__navbar-list-item--has-qr header__navbar-list-item-tow">
+                <a class="header__navbar-list-link" href=""> Phòng </a>
+                <div class="header__ul-list">
+                  <ul class="header__ul-item">
+                    <li><a class="link" href="./livingroom.html">Phòng Khách</a></li>
+                    <li><a class="link" href="./diningroom.html">Phòng Ăn</a></li>
+                    <li><a class="link" href="./bedroom.html">Phòng Ngủ</a></li>
+                    <li><a class="link" href="./workroom.html">Phòng Làm Việc</a></li>
+                    <li><a class="link" href="./workroom.html">Tủ bếp</a></li>
+                    <li><a class="link" href="./workroom.html">Sân vườn</a></li>
+                  </ul>
+                </div>
+
+                <span class="material-symbols-outlined">
+                  expand_more
+                </span>
+
+              </li>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-list-link" href=""> Giới Thiệu </a>
+              </li>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-list-link" href=""> Liên Hệ </a>
+              </li>
+            </ul>
+          </div>
+          <!-- layout search -->
+          <div class="header__navbar--search">
+            <input oninput="searchProducts()" class="header__search-ipt" type="text" placeholder="Tìm kiếm...">
+
+            <span onclick="sortByName()" class="material-symbols-outlined icon">
+              search
+            </span>
+            <div id="search">
+              <!-- <ul>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+                                  <li></li>
+
+                                </ul> -->
+            </div>
+          </div>
+
+          <!-- lay out login,register -->
+          <div class="header__navbar-login-register">
+
+            <ul class="header__navbar-ionform">
+              <a style="color: #fff;" href="./cart.html">
+                <span class="material-symbols-outlined icon1 ">
+                  shopping_cart
+                </span>
+              </a>
+              <span class="header__cart-cire">0</span>
+              <span onclick="clickUser()" style="display: none;" class="material-symbols-outlined person">
+                person
+              </span>
+              <div class="infor__list" style="display: none;">
+                <div class="infor__logout " onclick="logOut()">
+                  <span class="material-symbols-outlined">
+                    logout
+                  </span>
+                </div>
+                <div class="infor__cart">
+                  <a href="./cart.html"><span style="color: #fff;" class="material-symbols-outlined">
+                      shopping_cart
+                    </span></a>
+                </div>
+                <span class="material-symbols-outlined close">
+                  cancel
+                </span>
+              </div>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-login header__navbar-login--separate login " href="./register.html">Đăng Ký</a>
+              </li>
+              <li class="header__navbar-list-item">
+                <a class="header__navbar-login register " href="./login.html">Đăng Nhập</a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+      <div id="snackbar"></div>
+      <!-- header end -->
+      <div style=" text-align: center;">
+        <h1>
+          <button class="livingbnt">Phòng khách</button>
+        </h1>
+      </div>
+    </header>
+  </div>
+  <main class="main__container">
+    <div class="product-row">
+      <div style="margin-right:95px; background-color:#fff    ;" class="main__container--list">
+        <div class="main__container--category">
+          <a class="main__container--category-linkone" href="../index.html">
+            <span style="color: #0A0A0B;">Nội thất phòng khách</span>
+          </a>
+          <hr>
+        </div>
+        <div class="main__container--categorytow">
+          <a class="main__container--category-linktow" href="../index.html">
+            <span style="color: #0A0A0B;"> Mẫu phòng khách</span>
+          </a>
+          <hr>
+        </div>
+        <div>
+          <div class="a">
+            <div class="main__container--category-item">
+              <a class="main__container--category-linkthree" href="">
+                <span style="color: #0A0A0B; ">Sofa</span>
+              </a>
+              <hr style="width: 60px;margin:0 auto;">
+            </div>
+            <div class="main__container--category-item">
+              <a class="main__container--category-linkthree" href="">
+                <span style="color: #0A0A0B;">Sofa góc</span>
+              </a>
+              <hr style="width: 60px;margin:0 auto;">
+            </div>
+            <div class="main__container--category-item">
+              <a class="main__container--category-linkthree" href="">
+                <span style="color: #0A0A0B;">Sofa da</span>
+              </a>
+              <hr style="width: 60px;margin:0 auto;">
+            </div>
+          </div>
+        </div>
+        <div class="b">
+          <div class="main__container--category-item">
+            <a class="main__container--category-linkthree" href="">
+              <span style="color: #0A0A0B; margin-top: 20px;">Ghế thư giãn</span>
+            </a>
+            <hr style="width: 100px;margin:0 auto;">
+          </div>
+          <div class="main__container--category-item">
+            <a class="main__container--category-linkthree" href="">
+              <span style="color: #0A0A0B;">Amchair</span>
+            </a>
+            <hr style="width: 100px;margin:0 auto;">
+          </div>
+          <div class="main__container--category-item">
+            <a class="main__container--category-linkthree" href="">
+              <span style="color: #0A0A0B;">Ghế dài & Đôn</span>
+            </a>
+            <hr style="width: 100px;margin:0 auto;">
+          </div>
+          <div class="main__container--category-item">
+            <a class="main__container--category-linkthree" href="">
+              <span style="color: #0A0A0B;">Bàn nước</span>
+            </a>
+            <hr style="width: 80px;margin:0 auto;">
+          </div>
+          <div class="main__container--category-item">
+            <a class="main__container--category-linkthree" href="">
+              <span style="color: #0A0A0B;">Tủ tivi</span>
+            </a>
+            <hr style="width: 60px;margin:0 auto;">
+          </div>
+        </div>
+
+      </div>
+      <div>
+      
+        <div class="productsLiving">
+        </div>
+        <div id="asd">
+          <!-- <div class = "bnthover" style="display:block;">
+              <div>
+                      <span class="material-symbols-outlined cancel">
+                      close
+                       </span>
+              </div>
+              
+             <div>
+                  <a href=""> <img class="imagetow" src="../asset/image/phongan13.jpg" alt=""></a>
+                  
+             </div>
+             <div>
+                      <span class = "livingname">
+                          Sofa
+                      </span>
+              </div>
+             <div class="textliving">
+                   <span >Trong phiên bản mới, Jadora khoác lên mình màu sắc trang nhã cùng hoa văn độc đáo, hứa hẹn sẽ là điểm nhấn tuyệt vời cho không gian phòng khách. Với kiểu dáng rộng rãi cùng phần đệm ngồi êm ái, đây sẽ là chốn dừng chân lý tưởng để nằm hoặc ngồi đọc sách và nhâm nhi một tách trà. Bàn nước Bolero với tông màu ánh đồng cùng ba chân inox màu gold được thiết kế vững chắc, khi kết hợp cùng sofa Jadora sẽ mang đến không gian ngày hè phảng phất không khí cổ điển. Thêm một chút sắc xanh cho không gian dịu mát với một bình hoa rực rỡ trên bàn nước Bolero.</span>
+             </div>
+          </div>  -->
+          <!-- <div class="card">
+            <div class="card-header">
+              <span class="material-symbols-outlined card-header__icon ">
+                close
+              </span>
+              <a href=""> <img class="card-header__img" src="../asset/image/phongan13.jpg" alt=""></a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-body__title">
+                Sofa
+              </h4>
+                <div id="text" style="height: 110px;overflow:hidden;">
+                  <p class="card-body__text">Trong phiên bản mới, Jadora khoác lên mình màu sắc trang nhã cùng hoa văn độc đáo, hứa hẹn sẽ là
+                    điểm nhấn tuyệt vời cho không gian phòng khách. Với kiểu dáng rộng rãi cùng phần đệm ngồi êm ái, đây sẽ
+                    là chốn dừng chân lý tưởng để nằm hoặc ngồi đọc sách và nhâm nhi một tách trà. Bàn nước Bolero với tông
+                    màu ánh đồng cùng ba chân inox màu gold được thiết kế vững chắc, khi kết hợp cùng sofa Jadora sẽ mang
+                    đến không gian ngày hè phảng phất không khí cổ điển. Thêm một chút sắc xanh cho không gian dịu mát với
+                    một bình hoa rực rỡ trên bàn nước Bolero.</p>
+                </div>
+                <button onclick="btn()" class="card-body__btn">Xem thêm</button>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+    <!-- main area  -->
+  </main>
+  <div class="pagination">
+    <span onclick="decreasePage()" class="material-symbols-outlined">
+      arrow_back_ios
+    </span>
+    <ul id="pages">
+      <!-- <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li> -->
+    </ul>
+    <span onclick="increasepage ()" class="material-symbols-outlined">
+      arrow_forward_ios
+    </span>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__column">
+          <!-- logo -->
+          <a href="/">
+            <div class="logo">
+              <span class="logo__circle"></span>
+              <span class="logo__text">
+                <span style="font-size: 25px; color: #fff;" class="logo__brand">Kết Nối với Home</span>
+
+              </span>
+            </div>
+          </a>
+          <!-- desc -->
+          <p class="footer__desc">
+            Một không gian sống đẹp là sự kết hợp hoàn hảo giữa nội thất và kiến trúc.
+          </p>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Giới thiệu</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Chuyện nhà Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Tổng công ty</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Tuyển dụng</a>
+            </li>
+          </ul>
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Hỗ trợ</a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Đổi trả</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Sản Phẩm </a>
+            </li>
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Ý tưởng</a>
+            </li>
+          </ul>
+          <h3 class="footer__heading">Home</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#!" class="footer__link">Thiết kế</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h3 class="footer__heading">Bản tin</h3>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dvi" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+          </div>
+
+          <h3 class="footer__heading">Đăng ký</h3>
+
+          <p class="footer__desc">
+            Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Home
+          </p>
+
+          <form class="footer-form" action="">
+            <input class="footer-form__input" type="email" name="email" id="email" placeholder="Enter your email..." />
+            <button class="btn footer-form__submit" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          © 2023 - Bản quyền của Home - thương hiệu thuộc AKA Furniture.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/livingroom.js"> </script>
+</body>
+
+</html>
